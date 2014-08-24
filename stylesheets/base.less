@@ -1,0 +1,315 @@
+@import "syntax-variables";
+
+.editor-colors {
+  background-color: @light-gray;
+  color: @dark;
+}
+
+.editor {
+  background-color: @light-gray;
+  color: @dark;
+
+  .wrap-guide {
+    background-color: @dark;
+  }
+
+  .indent-guide {
+    color: darken(@medium-gray, 10%);
+  }
+
+  .invisible-character {
+    color: @black;
+  }
+
+  .gutter {
+    background-color: @light-gray;
+    color: @dark-gray;
+
+    .line-number {
+      &.cursor-line {
+        background-color: darken(@medium-gray, 5%);
+        color: lighten(@black, 10%);
+      }
+
+      &.cursor-line-no-selection {
+        color: @dark;
+      }
+    }
+  }
+
+   // Let's space out the line number for collapsed code
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: darken(@dark-gray, 20%);
+    padding-left: 15px;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @dark;
+  }
+
+  .selection .region {
+    background-color: lighten(@orange, 30%);
+  }
+}
+
+.editor .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @orange;
+}
+
+.editor .search-results .marker.current-result .region {
+  border: 1px solid @orange;
+}
+
+.comment {
+  color: @green;
+  font-style: italic;
+}
+
+.entity {
+  &.name.type {
+    color: @dark;
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+}
+
+.keyword {
+  color: darken(@medium-gray, 20%);
+
+  &.control {
+    color: @dark-gray;
+  }
+
+  &.operator {
+    color: darken(@medium-gray, 20%);
+  }
+
+  &.other.special-method {
+    color: @dark-gray;
+  }
+
+  &.other.unit {
+    color: darken(@medium-gray, 20%);
+    padding-left: 3px;
+  }
+}
+
+.storage {
+  color: darken(@medium-gray, 40%);
+}
+
+.constant {
+  color: @dark;
+
+  &.character.escape {
+    color: darken(@medium-gray, 40%);
+  }
+
+  &.numeric {
+    color: darken(@medium-gray, 40%);
+  }
+
+  &.other.color {
+    color: darken(@medium-gray, 40%);
+  }
+
+  &.other.symbol {
+    color: @green;
+  }
+}
+
+.variable {
+  color: darken(@medium-gray, 40%);
+
+  &.interpolation {
+    color: darken(@red, 10%);
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @light-gray;
+}
+
+.string {
+  color: @green;
+
+
+  &.regexp {
+    color: @orange;
+
+    .source.ruby.embedded {
+      color: @orange;
+    }
+  }
+
+  &.other.link {
+    color: @red;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @green;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @dark;
+    }
+
+    &.heading,
+    &.identity {
+      color: @green;
+    }
+
+    &.bold {
+      color: lighten(@orange, 10%);
+      font-style: bold;
+    }
+
+    &.italic {
+      color: @red;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@red, 10%);
+  }
+
+}
+
+.support {
+  &.class {
+    color: lighten(@orange, 10%);
+  }
+
+  &.function  {
+    color: @orange;
+
+    &.any-method {
+      color: @orange;
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @orange;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @dark;
+  }
+
+  &.name.section {
+    color: @green;
+  }
+
+  &.name.tag {
+    color: lighten(@dark-2, 20%);
+  }
+
+  &.other.attribute-name {
+    color: @orange;
+
+    &.id {
+      color: @orange;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @dark;
+  }
+
+  &.link {
+    color: @orange;
+  }
+
+  &.require {
+    color: @green;
+  }
+
+  &.selector {
+    color: lighten(@dark-2, 20%);
+  }
+
+  &.separator {
+    background-color: @dark-gray;
+    color: @syntax-text-color;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @orange;
+    font-style: bold;
+  }
+
+  &.changed {
+    color: @red;
+  }
+
+  &.deleted {
+    color: @red;
+  }
+
+  &.italic {
+    color: @red;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @green;
+  }
+
+  &.inserted {
+    color: @green;
+  }
+
+  &.list {
+    color: @red;
+  }
+
+  &.quote {
+    color: @orange;
+  }
+
+  &.raw.inline {
+    color: @green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @green;
+  }
+}
+
+.editor.mini .scroll-view {
+  padding-left: 1px;
+}
