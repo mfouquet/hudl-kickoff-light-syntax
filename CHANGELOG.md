@@ -1,4 +1,7 @@
-## 1.0.1 - First Release
+## 1.0.2
+* Change the background color
+
+## 1.0.1
 * Fix the package description
 
 ## 1.0.0 - First Release
