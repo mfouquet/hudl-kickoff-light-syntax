@@ -1,12 +1,12 @@
 @import "syntax-variables";
 
 .editor-colors {
-  background-color: @light-gray;
+  background-color: @white;
   color: @dark;
 }
 
 .editor {
-  background-color: @light-gray;
+  background-color: @white;
   color: @dark;
 
   .wrap-guide {
@@ -22,12 +22,12 @@
   }
 
   .gutter {
-    background-color: @light-gray;
-    color: @dark-gray;
+    background-color: @white;
+    color: darken(@medium-gray, 10%);
 
     .line-number {
       &.cursor-line {
-        background-color: darken(@medium-gray, 5%);
+        background-color: @light-gray;
         color: lighten(@black, 10%);
       }
 
