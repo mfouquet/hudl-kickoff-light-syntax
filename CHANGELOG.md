@@ -1,3 +1,6 @@
+## 1.1.1
+* Update the orange color
+
 ## 1.0.2
 * Change the background color
 
