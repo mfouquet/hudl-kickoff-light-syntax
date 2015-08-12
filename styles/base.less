@@ -1,20 +1,15 @@
 @import "syntax-variables";
 
-.editor-colors {
+atom-text-editor, :host {
   background-color: @white;
-  color: @dark;
-}
-
-.editor {
-  background-color: @white;
-  color: @dark;
+  color: @dark-blue;
 
   .wrap-guide {
-    background-color: @dark;
+    background-color: @dark-blue;
   }
 
   .indent-guide {
-    color: darken(@medium-gray, 10%);
+    color: darken(@med-gray, 10%);
   }
 
   .invisible-character {
@@ -23,7 +18,7 @@
 
   .gutter {
     background-color: @white;
-    color: darken(@medium-gray, 10%);
+    color: darken(@med-gray, 10%);
 
     .line-number {
       &.cursor-line {
@@ -32,17 +27,16 @@
       }
 
       &.cursor-line-no-selection {
-        color: @dark;
+        color: @dark-blue;
       }
     }
   }
 
-   // Let's space out the line number for collapsed code
   .gutter .line-number.folded,
   .gutter .line-number:after,
   .fold-marker:after {
     color: darken(@dark-gray, 20%);
-    padding-left: 15px;
+    padding-left: 10px;
   }
 
   .invisible {
@@ -50,7 +44,7 @@
   }
 
   .cursor {
-    color: @dark;
+    color: @green;
   }
 
   .selection .region {
@@ -74,7 +68,7 @@
 
 .entity {
   &.name.type {
-    color: @dark;
+    color: @dark-blue;
   }
 
   &.other.inherited-class {
@@ -83,14 +77,14 @@
 }
 
 .keyword {
-  color: darken(@medium-gray, 20%);
+  color: darken(@med-gray, 20%);
 
   &.control {
     color: @dark-gray;
   }
 
   &.operator {
-    color: darken(@medium-gray, 20%);
+    color: darken(@med-gray, 20%);
   }
 
   &.other.special-method {
@@ -98,28 +92,27 @@
   }
 
   &.other.unit {
-    color: darken(@medium-gray, 20%);
-    padding-left: 3px;
+    color: darken(@med-gray, 20%);
   }
 }
 
 .storage {
-  color: darken(@medium-gray, 40%);
+  color: darken(@med-gray, 40%);
 }
 
 .constant {
-  color: @dark;
+  color: @dark-blue;
 
   &.character.escape {
-    color: darken(@medium-gray, 40%);
+    color: darken(@med-gray, 40%);
   }
 
   &.numeric {
-    color: darken(@medium-gray, 40%);
+    color: darken(@med-gray, 40%);
   }
 
   &.other.color {
-    color: darken(@medium-gray, 40%);
+    color: darken(@med-gray, 40%);
   }
 
   &.other.symbol {
@@ -128,7 +121,7 @@
 }
 
 .variable {
-  color: darken(@medium-gray, 40%);
+  color: darken(@med-gray, 40%);
 
   &.interpolation {
     color: darken(@red, 10%);
@@ -171,7 +164,7 @@
     &.variable,
     &.parameters,
     &.array {
-      color: @dark;
+      color: @dark-blue;
     }
 
     &.heading,
@@ -181,7 +174,7 @@
 
     &.bold {
       color: lighten(@orange, 10%);
-      font-style: bold;
+      font-weight: bold;
     }
 
     &.italic {
@@ -216,7 +209,7 @@
   }
 
   &.name.class, &.name.type.class {
-    color: @dark;
+    color: @dark-blue;
   }
 
   &.name.section {
@@ -224,7 +217,8 @@
   }
 
   &.name.tag {
-    color: lighten(@dark-2, 20%);
+    color: lighten(@light-blue, 20%);
+    font-weight: bold
   }
 
   &.other.attribute-name {
@@ -238,7 +232,7 @@
 
 .meta {
   &.class {
-    color: @dark;
+    color: @dark-blue;
   }
 
   &.link {
@@ -250,7 +244,7 @@
   }
 
   &.selector {
-    color: lighten(@dark-2, 20%);
+    color: lighten(@light-blue, 20%);
   }
 
   &.separator {
@@ -310,6 +304,7 @@
   }
 }
 
-.editor.mini .scroll-view {
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
   padding-left: 1px;
 }

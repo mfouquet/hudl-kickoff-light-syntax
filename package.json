@@ -1,11 +1,11 @@
 {
   "name": "hudl-kickoff-light-syntax",
   "theme": "syntax",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A light syntax theme based on Hudl's kickoff colors",
   "repository": "https://github.com/mfouquet/hudl-kickoff-light-syntax",
   "license": "MIT",
   "engines": {
-    "atom": ">0.50.0"
+    "atom": ">=1.0.0 <2.0.0"
   }
 }

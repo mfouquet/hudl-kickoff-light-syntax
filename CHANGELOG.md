@@ -1,3 +1,6 @@
+## 1.2.0
+* Fix deprecated items
+
 ## 1.1.1
 * Update the orange color
 
