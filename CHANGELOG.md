@@ -1,4 +1,4 @@
-## 1.2.0
+## 1.3.0
 * Fix deprecated items
 
 ## 1.1.1
