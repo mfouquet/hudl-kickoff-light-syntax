@@ -52,12 +52,14 @@ atom-text-editor, :host {
   }
 }
 
-.editor .search-results .marker .region {
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
   background-color: transparent;
   border: 1px solid @orange;
 }
 
-.editor .search-results .marker.current-result .region {
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
   border: 1px solid @orange;
 }
 
